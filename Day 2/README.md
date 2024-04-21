@@ -22,6 +22,8 @@ In oorder to work with PHP, we shall install XAMPP
 We have to head up to explore, then we place our folders in the htdocs folder.
 
 ![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/0ccdeb59-edc7-4a2a-aeb9-eb5ec570c515)
+![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/b5d55595-767f-4908-a459-d089980efc60)
+
 
 Then we can go to the path as: <br>
 
