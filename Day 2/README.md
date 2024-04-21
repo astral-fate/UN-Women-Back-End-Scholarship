@@ -21,6 +21,15 @@ In oorder to work with PHP, we shall install XAMPP
 ### Accessing Paths
 We have to head up to explore, then we place our folders in the htdocs folder.
 
+![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/0ccdeb59-edc7-4a2a-aeb9-eb5ec570c515)
+
+Then we can go to the path as: <br>
+
+##### Using the folder path
+http://localhost/back-end/cv.php
+
+##### Using the loopback IP adress
+http://127.0.0.1/back-end/cv.php
 
 ### Task Details
 In the 2nd task we are asked to pass vars into the html tag.
