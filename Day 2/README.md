@@ -2,14 +2,11 @@
 
 ## Table of Contents
 - [Introduction to PHP](#introduction-to-PHP)
-  - [Prerequisites](#prerequisites)
-  - [Accessing Paths](#accessing-paths)
-- [Usage](#usage)
-  - [Task Details](#task-details)
-  - [Echo in PHP](#echo-in-php)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Prerequisites](#prerequisites)
+- [Accessing Paths](#accessing-paths)
+- [Task Details](#task-details)
+- [Echo in PHP](#echo-in-php)
+
 
 ## Introduction to PHP
 _Brief description of the project goes here._
