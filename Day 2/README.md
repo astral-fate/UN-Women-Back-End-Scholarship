@@ -35,11 +35,10 @@ http://127.0.0.1/back-end/cv.php
 
 ### Task Details
 In the 2nd task we are asked to pass vars into the html tag.
-
-![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/50518725-9613-4db4-bc64-e938654ce501)
-
+###### First defining the variables
 ![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/2a6053dc-8abf-46b7-82fb-96f0a4cf6c50)
-
+###### Second passing the variables into the html tags
+![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/50518725-9613-4db4-bc64-e938654ce501)
 
 
 
