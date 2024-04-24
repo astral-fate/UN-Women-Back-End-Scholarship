@@ -1,19 +1,20 @@
 
+
 <?php
     $grade = 10;
     if ($grade >= 90) {
-        echo '<p>Excellence</p>';
+        echo 'Excellence';
     } elseif ($grade <= 90 and $grade >= 76) {
-        echo '<p>Very Good</p>';
+        echo 'Very Good';
     } elseif ($grade <= 75 and $grade >= 66) {
-        echo '<p>Good</p>';
+        echo 'Good';
     }  elseif ($grade <= 65 and $grade >= 51) {
-        echo '<p>Pass</p>';
+        echo 'Pass';
     }  elseif ($grade <= 50) {
-        echo '<p>Fail</p>';
+        echo 'Fail';
     } 
         else {
-        echo '<p>Fail</p>';
+        echo 'Fail';
     }
 
 ?>
