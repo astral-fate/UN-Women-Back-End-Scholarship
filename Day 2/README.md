@@ -1,4 +1,4 @@
-# Project Title
+# Setting up PHP 
 
 ## Table of Contents
 - [Introduction to PHP](#introduction-to-PHP)
