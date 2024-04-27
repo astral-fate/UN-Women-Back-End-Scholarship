@@ -5,7 +5,7 @@
 - [While Loop](#While-Loop)
 - [HTML example on While Loop](#HTML-example-on-While-Loop)
 - [Do While Loop](#Do-While-Loop)
-- [For Loop](#For Loop)
+- [For Loop](#For-Loop)
 
 
 ### Tips and tricks 
