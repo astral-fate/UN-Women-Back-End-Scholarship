@@ -4,7 +4,7 @@
 - [Constant Vs Vars](#Constant-Vs-Vars)
 - [If Statement](#If-Statement)
 - [If Else Statement](#If-Else-Statement)
-- [Logical Operators](#Logical Operators)
+- [Logical Operators](#Logical-Operators)
 - [Task](#Task)
 
 
