@@ -23,7 +23,7 @@ Switch is not commonly used, however it's best to fimilirize ourself with its sy
 #### Example:
 
 
-### While Loop
+## While Loop
 
 While loop works as a for loop, and its synatx is as followed:
 ````
@@ -34,7 +34,7 @@ while($x<=5){
   }
 ````
 
-### Do While Loop
+## Do While Loop
 
 The main diffrences between while loop and do-while loop, is that the 2nd print the condition at least one, whereas while loop dose not.
 
@@ -54,17 +54,17 @@ This will print the value of x even if the condition is not satsified.
 In oorder to work with PHP, we shall install XAMPP
 
 
-### For Each Loop
+## For Each Loop
 
 
-### For Loop
+## For Loop
 
 
 
-### Arrays
+## Arrays
 
 
-### Functions
+## Functions
 
 passing parameters.
 
