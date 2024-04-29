@@ -34,6 +34,20 @@ while($x<=5){
 
 ### Do While Loop
 
+The main diffrences between while loop and do-while loop, is that the 2nd print the condition at least one, whereas while loop dose not.
+
+#### Example:
+````
+$x=10;
+do{
+  echo 'the number is:' . $x;
+  $x++;
+  }
+while($x>100);
+````
+
+This will print the value of x even if the condition is not satsified. 
+
 ### HTML example on While Loop
 In oorder to work with PHP, we shall install XAMPP
 
