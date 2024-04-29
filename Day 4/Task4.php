@@ -210,11 +210,15 @@
                                 <tbody>
                        <tr>
             <?php
-            for ($x=0; $x<=5;){
+            $myarray=['fatma', 'sarah'];
+            for ($i = 0; $i <=3; $i++) {
+                foreach($myarray as $name){
+                
+               
               //  echo $x++;    
             ?>
                                         <td>1</td>
-                                        <td>Vincent Williamson</td>
+                                        <td><?php echo $name ?></td>
                                         <td>31</td>
                                         <td>iOS Developer</td>
                                         <td>Sinaai-Waas</td>
@@ -226,8 +230,10 @@
                                         </td>
                                     </tr>
                 <?php
-                echo $x++;
+
+                }
             }
+                
 
                 ?>
        
