@@ -6,6 +6,7 @@
 - [HTML example on While Loop](#HTML-example-on-While-Loop)
 - [Do While Loop](#Do-While-Loop)
 - [For Loop](#For-Loop)
+- [For Each Loop](#For-Each-Loop)
 
 
 ### Tips and tricks 
@@ -15,16 +16,29 @@ and automatically the vc code editor will recogiize the stnatx, and uses the app
 
 
 ## Switch Statmen
-_Brief description of the project goes here._
+Switch is not commonly used, however it's best to fimilirize ourself with its syntax.
+
+#### Example:
+
 
 ### While Loop
-_Examples and best practices for using `echo` to output in PHP._
+
+While loop works as a for loop, and its synatx is as followed:
+
+'$x=1;
+while($x<=5){
+  $x++;
+  echo 'the number is:' . $x;
+  }
+  '
+
+### Do While Loop
 
 ### HTML example on While Loop
 In oorder to work with PHP, we shall install XAMPP
 
 
-### Do While Loop
+### For Each Loop
 
 
 ### For Loop
