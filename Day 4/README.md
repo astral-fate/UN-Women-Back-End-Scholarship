@@ -7,6 +7,8 @@
 - [Do While Loop](#Do-While-Loop)
 - [For Loop](#For-Loop)
 - [For Each Loop](#For-Each-Loop)
+- [Array](#Array)
+- [Funtions](#Functions)
 
 
 ### Tips and tricks 
@@ -56,3 +58,13 @@ In oorder to work with PHP, we shall install XAMPP
 
 
 ### For Loop
+
+
+
+### Arrays
+
+
+### Functions
+
+passing parameters.
+
