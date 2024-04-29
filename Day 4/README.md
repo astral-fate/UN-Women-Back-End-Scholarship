@@ -24,13 +24,13 @@ Switch is not commonly used, however it's best to fimilirize ourself with its sy
 ### While Loop
 
 While loop works as a for loop, and its synatx is as followed:
-
-'$x=1;
+````
+$x=1;
 while($x<=5){
   $x++;
   echo 'the number is:' . $x;
   }
-  '
+````
 
 ### Do While Loop
 
