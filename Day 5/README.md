@@ -3,7 +3,7 @@
 ## Table of Contents
 - [$GLOBALS](#$GLOBALS)
 - [Indexed Lists](#Indexed-Lists)
-- [Linked List Array](#Linked List Array)
+- [Linked List Array](#Linked-List-Array)
 - [Return Statment](#Return-Statment)
 - [If Set](#If-Set)
 - [Get Request](#Get-Request)
