@@ -34,7 +34,23 @@ function validatePhoneNumber($phone) {
     return preg_match('/^\d{10}$/', $phone); // Validates a 10 digit number
 }
 
+// Security scan function
+function performSecurityScan($file) {
+    // Implement your security scan logic here
+    // For example, check for file type, size, or perform antivirus scan
+    // Return true if the file passes the security scan, false otherwise
+    return true; // For demonstration purposes, always return true
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Perform security scan on uploaded files
+    if (!performSecurityScan($_FILES["pdf"]["tmp_name"]) || !performSecurityScan($_FILES["image"]["tmp_name"])) {
+        $_SESSION['error_message'] = "Security scan failed. Please upload safe documents.";
+        header('Location: signup.php');
+        exit();
+    }
+
+    // Proceed with form data validation and database insertion
     $username = $conn->real_escape_string($_POST['username']);
     $email = $conn->real_escape_string($_POST['email']);
     $password = $conn->real_escape_string($_POST['password']);
@@ -107,39 +123,40 @@ $conn->close();
         ?>
         <h1>Sign Up</h1>
         <form action="signup.php" method="POST" enctype="multipart/form-data">
-        <label for="username">Username:</label><br>
-    <input type="text" id="username" name="username" required><br>
-    <label for="lastname">Last Name:</label><br>
-    <input type="text" id="lastname" name="lastname" required><br>
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" required><br>
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br>
-    <label for="phone">Phone:</label><br>
-    <input type="text" id="phone" name="phone" required><br>
-    <label for="dob">Date of Birth:</label><br>
-    <input type="date" id="dob" name="dob" required><br>
-    <label for="address">Address:</label><br>
-    <input type="text" id="address" name="address" required><br>
-    <label for="city">City:</label><br>
-    <input type="text" id="city" name="city" required><br>
-    <label for="state">State:</label><br>
-    <input type="text" id="state" name="state" required><br>
-    <label for="country">Country:</label><br>
-    <input type="text" id="country" name="country" required><br>
-    <label for="zipcode">Zip Code:</label><br>
-    <input type="text" id="zipcode" name="zipcode" required><br>
-    <label for="department">Department:</label><br>
-    <select id="department" name="department" required>
-    <option value="Engineering">Engineering</option>
-    <option value="Computer Science">Computer Science</option>
-    <option value="Cybersecurity">Cybersecurity</option>
-</select><br>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="lastname">Last Name:</label><br>
+            <input type="text" id="lastname" name="lastname" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="phone">Phone:</label><br>
+            <input type="text" id="phone" name="phone" required><br>
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob" required><br>
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address" required><br>
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="city" required><br>
+            <label for="state">State:</label><br>
+            <input type="text" id="state" name="state" required><br>
+            <label for="country">Country:</label><br>
+            <input type="text" id="country" name="country" required><br>
+            <label for="zipcode">Zip Code:</label><br>
+            <input type="text" id="zipcode" name="zipcode" required><br>
+            <label for="department">Department:</label><br>
+            <select id="department" name="department" required>
+                <option value="Engineering">Engineering</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+            </select><br>
 
             <label for="pdf">Upload PDF:</label><br>
-            <input type="file" id="pdf" name="pdf"><br>
+            <input type="file" id="pdf" name="pdf" required><br>
             <label for="image">Upload Image:</label><br>
-            <input type="file" id="image" name="image"><br>
+            <input type="file" id="image" name="image" required><br>
+            
             <button type="submit">Sign Up</button>
         </form>
         <a href="home.php">Back to Home</a>
