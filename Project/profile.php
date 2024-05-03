@@ -21,6 +21,12 @@ if (isset($_SESSION['user_id'])) {
     } else {
         echo "<p>User not found.</p>";
     }
+
+    // Check if there's a new message for the user
+    if (isset($_SESSION['message'])) {
+        $message = $_SESSION['message'];
+        unset($_SESSION['message']); // Clear the message after displaying
+    }
 } else {
     echo "<p>You are not logged in. <a href='signin.php'>Sign in</a></p>";
 }
@@ -55,8 +61,17 @@ $conn->close();
                 <li><strong>Zip Code:</strong> <?php echo htmlspecialchars($user_info['zipcode']); ?></li>
                 <li><strong>Department:</strong> <?php echo htmlspecialchars($user_info['department']); ?></li>
             </ul>
+
+            <?php if (isset($message)): ?>
+                <div class="message">
+                    <?php echo htmlspecialchars($message); ?>
+                </div>
+            <?php else: ?>
+                <p>There is no update.</p>
+            <?php endif; ?>
+
+            <h2>Your application has been submitted</h2>
         <?php endif; ?>
-        <h2>Your application has been submitted</h2>
     </div>
 </body>
 </html>
