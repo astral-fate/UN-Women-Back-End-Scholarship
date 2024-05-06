@@ -1,5 +1,26 @@
 <?php
 session_start();
+
+// Function to check if a debugger is attached
+function is_debugger_attached() {
+    $is_debugger_attached = false;
+    
+    // Check if a debugger is attached
+    if (function_exists('xdebug_is_debugger_active')) {
+        $is_debugger_attached = xdebug_is_debugger_active();
+    } elseif (function_exists('zend_is_debugger_active')) {
+        $is_debugger_attached = zend_is_debugger_active();
+    }
+    
+    return $is_debugger_attached;
+}
+
+// Check if a debugger is attached
+if (is_debugger_attached()) {
+    // Display an informative message for developers
+    echo "Debugger detected. Debugging tools are active. This message is displayed for development purposes.";
+}
+
 $current_date = strtotime("2024-05-02"); // Convert the current date to a UNIX timestamp
 $deadline_date = strtotime("2024-05-11"); // Convert the deadline date to a UNIX timestamp
 
@@ -7,15 +28,29 @@ $deadline_date = strtotime("2024-05-11"); // Convert the deadline date to a UNIX
 if ($current_date > $deadline_date) {
     // If the current date is after the deadline date, display a message
     echo "<p>The deadline for submitting or modifying applications has passed.</p>";
- 
     exit(); // Exit to prevent further execution of the script.
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "CollegeApplication";
+// Function to calculate checksum of a file
+function calculate_checksum($file_path) {
+    return md5_file($file_path);
+}
 
+$expected_checksum = "ad9993121bb94549b59f8a92bdc673da"; 
+$file_path = "config.php"; 
+if (calculate_checksum($file_path) !== $expected_checksum) {
+    echo "Critical files have been tampered with. Access denied."; 
+    exit(); // Terminate script execution
+}
+
+// Include configuration
+$config = include('confg.php');
+$servername = $config['servername'];
+$username = $config['username'];
+$password = $config['password'];
+$dbname = $config['dbname'];
+
+// Connect to the database
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -35,16 +70,27 @@ function validatePhoneNumber($phone) {
 }
 
 // Security scan function
-function performSecurityScan($file) {
-    // Implement your security scan logic here
-    // For example, check for file type, size, or perform antivirus scan
-    // Return true if the file passes the security scan, false otherwise
-    return true; // For demonstration purposes, always return true
+function performSecurityScan($pdf_file, $image_file) {
+    // Check PDF size
+    if ($_FILES["pdf"]["size"] > 8000000) { // 8 MB in bytes
+        $_SESSION['error_message'] = "PDF size is too large. Please upload a file smaller than 8 MB.";
+        return false;
+    }
+
+    // Check image file extension
+    $allowed_extensions = array('jpg', 'jpeg', 'png', 'gif');
+    $image_extension = strtolower(pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION));
+    if (!in_array($image_extension, $allowed_extensions)) {
+        $_SESSION['error_message'] = "Invalid image file format. Allowed formats: JPG, JPEG, PNG, GIF.";
+        return false;
+    }
+    
+    return true; // Return true if all security checks pass
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Perform security scan on uploaded files
-    if (!performSecurityScan($_FILES["pdf"]["tmp_name"]) || !performSecurityScan($_FILES["image"]["tmp_name"])) {
+    if (!performSecurityScan($_FILES["pdf"]["tmp_name"], $_FILES["image"]["tmp_name"])) {
         $_SESSION['error_message'] = "Security scan failed. Please upload safe documents.";
         header('Location: signup.php');
         exit();
