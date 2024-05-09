@@ -1,6 +1,6 @@
-
 ## Task 6
 Create a table using MySQL, given these details:
+
 
 | Name of the column        | Type of column|
 | :-------------: | :-------------: |
