@@ -19,16 +19,16 @@ Create a table using MySQL, given these details:
 
 The exported schema from MySQL admin:
 ````
-  CREATE TABLE `university` ( <br>
-    `id` int(11) NOT NULL,  <br>
-    `StudentName` varchar(100) NOT NULL,  <br>
-    `StudentNumber` int(100) NOT NULL,  <br>
-    `DoB` date NOT NULL,  <br>
-    `Stage` int(2) NOT NULL,  <br>
-    `expenses` int(100) NOT NULL,  <br>
-    `created_at` date NOT NULL  <br>
-  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;  <br>
-  COMMIT; <br>
+  CREATE TABLE `university` ( 
+    `id` int(11) NOT NULL,  
+    `StudentName` varchar(100) NOT NULL,  
+    `StudentNumber` int(100) NOT NULL,  
+    `DoB` date NOT NULL,  
+    `Stage` int(2) NOT NULL,  
+    `expenses` int(100) NOT NULL,  
+    `created_at` date NOT NULL  
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;  
+  COMMIT; 
 ````
 
 ## Data Insertion
@@ -37,7 +37,7 @@ Search how to insert data into the databse.
 Learn how to calcluate the date of which every entry has been created
 
 
-![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/1aebfbc0-784f-40e0-86c2-427ac153b31f)
+![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/b49df885-47c8-4799-83aa-64cb2542ab6c)
 
 ````
 
