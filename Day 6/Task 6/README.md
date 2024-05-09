@@ -18,15 +18,15 @@ Create a table using MySQL, given these details:
 
 
 '
-CREATE TABLE `university` (
-  `id` int(11) NOT NULL,
-  `StudentName` varchar(100) NOT NULL,
-  `StudentNumber` int(100) NOT NULL,
-  `DoB` date NOT NULL,
-  `Stage` int(2) NOT NULL,
-  `expenses` int(100) NOT NULL,
-  `created_at` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-COMMIT;
+CREATE TABLE `university` ( <br>
+  `id` int(11) NOT NULL,  <br>
+  `StudentName` varchar(100) NOT NULL,  <br>
+  `StudentNumber` int(100) NOT NULL,  <br>
+  `DoB` date NOT NULL,  <br>
+  `Stage` int(2) NOT NULL,  <br>
+  `expenses` int(100) NOT NULL,  <br>
+  `created_at` date NOT NULL  <br>
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;  <br>
+COMMIT; <br>
 
 '
