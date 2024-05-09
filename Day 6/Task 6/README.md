@@ -30,3 +30,20 @@ The exported schema from MySQL admin:
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;  <br>
   COMMIT; <br>
 ````
+
+## Data Insertion
+
+Search how to insert data into the databse.
+Learn how to calcluate the date of which every entry has been created
+
+
+![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/1aebfbc0-784f-40e0-86c2-427ac153b31f)
+
+````
+
+INSERT INTO `university`(`id`, `StudentName`, `StudentNumber`, `DoB`, `Stage`, `expenses`, `created_at`)
+VALUES ('1','Fatimah','09999','2001-06-30','12','120','2024-05-09')
+
+
+````
+
