@@ -18,7 +18,7 @@ Create a table using MySQL, given these details:
 
 
 The exported schema from MySQL admin:
-'''
+````
   CREATE TABLE `university` ( <br>
     `id` int(11) NOT NULL,  <br>
     `StudentName` varchar(100) NOT NULL,  <br>
@@ -29,5 +29,4 @@ The exported schema from MySQL admin:
     `created_at` date NOT NULL  <br>
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;  <br>
   COMMIT; <br>
-
-'''
+````
