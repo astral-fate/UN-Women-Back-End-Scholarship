@@ -40,6 +40,12 @@ where `StudentName` like `%a%`
 
 ````
 
+
+### Insert value into table
+
+We can either enter a value within a table, either through SQL query, or through the insert button.
+
+
 ### Order By
 
 ## Task 7
