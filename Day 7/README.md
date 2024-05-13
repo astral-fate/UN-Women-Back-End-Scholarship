@@ -112,3 +112,19 @@ To do that, we can use the for each statment, then looping each element on the d
 
 ````
 
+
+
+
+````
+    <?php
+     foreach($stmt->fetchAll() as $row){
+      echo "<tr>";
+      echo '<td>' .  $row['name']; '</td>';
+      echo '<td>' .  $row['phone']; '</td>';
+      echo '<td>' .  $row['city']; '</td>';
+      echo "<br>";
+      }
+     ?>
+
+````
+
