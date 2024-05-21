@@ -50,9 +50,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ## Step 5: Add the ```POST``` methof in the HTML form
 We have also added ```METHOD = "POST"``` to ensure that the user interface is inserting into the data. 
 ```
-			<form class="m-auto" style="max-width:600px" enctype="multipart/form-data" action="" method ="POST">
-
-			</form>
+	<form class="m-auto" style="max-width:600px" enctype="multipart/form-data" action="" method ="POST">
+	
+	</form>
 
 
 # The outcomes
