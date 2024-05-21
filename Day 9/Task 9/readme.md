@@ -54,6 +54,7 @@ We have also added ```METHOD = "POST"``` to ensure that the user interface is in
 	
 	</form>
 
+```
 
 # The outcomes
 
@@ -65,3 +66,7 @@ Upon completion, we have tested the testomial page by inserting data into it
 Then here we see from the PHP admin that the data are correctly inserted. 
 
 ![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/76c49ddc-a4e9-420e-9c2e-4d9a1c8e698c)
+
+## Bouns 
+
+We can then display these testominals into the front end user
