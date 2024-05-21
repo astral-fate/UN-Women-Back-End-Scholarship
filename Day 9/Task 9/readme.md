@@ -1,14 +1,31 @@
+# Task 9:
 
+ ## The Target
+
+ The goal in this 
+
+ ### Step 1: Convert HTML into PHP page
+
+ ## Step 2: Create Testimonial table
+ 
 We have 1st created a new table called 'Testominal'.   We have added 4 coloumns as follow:
 ![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/18fc8209-5d6d-4e15-8cb9-76518f489a5f)
 
+
+## Step 3: Conncet the database to the PHP server
 Then we have connected our database to the PHP server, using conn. Then we have started to call our varibales that have the same name in the HTML form
 
 ```
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     include_once('includes/conn.php');
-	include('upload.php');
+    include('upload.php');
+?>
+```
+
+## Step 4: Idetify the coloumns in the table
+
+```
     $name = $_POST['name'];
     $position = $_POST['position'];  
     $content = $_POST['content'];  
@@ -25,13 +42,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "Error: " . $msg;
     }
 }
-?>
+
 ```
 
+## Step 5: Add the ```POST``` methof in the HTML form
 We have also added ```METHOD = "POST"``` to ensure that the user interface is inserting into the data. 
 
 
-## The outcomes
+# The outcomes
 
 Upon completion, we have tested the testomial page by inserting data into it
 
