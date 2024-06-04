@@ -1,8 +1,9 @@
 ## Creating components 
 
 For better maintanince, we have created a component of each html div
-![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/a30f48e3-85f6-4f9f-8d93-d1db79139c57)
+![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/bcaa8302-8aa3-4fea-8bb2-558f6c11dda7)
 
+Then we have call its path
 ![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/76844ef7-a33c-4c69-807a-f439d3ebd8b6)
 
 ## Editing cars
