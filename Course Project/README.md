@@ -9,9 +9,33 @@
 ## Requirements
 Components
 
-## Admin Pane
+## Admin Panel
+
 
 ```
+
+if (isset($_SESSION['Email'])) {
+    $email = $_SESSION['Email'];
+    try {
+        $sql = "SELECT `name` FROM `users` WHERE `Email` = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$email]);
+        if ($stmt->rowCount() > 0) {
+            $user = $stmt->fetch();
+            $fullName = $user['name'];
+        } else {
+            $fullName = "User";
+        }
+    } catch(PDOException $e) {
+        $msg = $e->getMessage();
+        $alertType = "alert-danger";
+    }
+} else {
+    $fullName = "Guest";
+}
+?>
+
+
 Displaying the name of the logged in user
 
           <div class="profile_info">
