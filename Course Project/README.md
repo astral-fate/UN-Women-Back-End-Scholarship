@@ -11,6 +11,26 @@ Components
 
 ## Admin Panel
 
+### Sign Up
+
+### Log in
+
+### Add User
+
+### Edit User
+
+### Add Categories
+
+### Manage Categories
+
+### Add Meetings
+
+### Manage Meetings
+
+## Displaying the name of the logged in user
+
+
+
 
 ```
 
