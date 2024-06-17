@@ -13,7 +13,7 @@ Components
 
 ### Sign Up ✅
 
-### Log in
+### Log in ✅
 
 ### Add User ✅
 
@@ -21,7 +21,7 @@ Components
 
 ### Add Categories ✅
 
-### Manage Categories 
+### Manage Categories ✅
 
 ### Add Meetings ✅
 
