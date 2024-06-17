@@ -11,23 +11,23 @@ Components
 
 ## Admin Panel
 
-### Sign Up
+### Sign Up ✅
 
 ### Log in
 
-### Add User
+### Add User ✅
 
-### Edit User
+### Edit User ✅
 
-### Add Categories
+### Add Categories ✅
 
-### Manage Categories
+### Manage Categories 
 
-### Add Meetings
+### Add Meetings ✅
 
 ### Manage Meetings
 
-## Displaying the name of the logged in user
+## Displaying the name of the logged in user ✅
 
 
 
