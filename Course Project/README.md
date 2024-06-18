@@ -27,10 +27,10 @@ Components
 
 ![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/218feba8-6b2b-4cf3-90cd-4796670e4d70)
 
-#### Deleting used category
+#### Deleting not used category
 ![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/4dcfad97-760a-4de1-8ab3-89764c8c1d79)
 
-#### Deleting not used category
+#### Deleting used category
 ![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/c6d55187-3b86-4b0a-bea4-1bfbfd86b02e)
 
 
