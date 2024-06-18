@@ -36,7 +36,10 @@ Components
 
 ### Add Meetings ✅
 
-### Manage Meetings
+### Manage Meetings ✅
+
+![image](https://github.com/astral-fate/UN-Women-Back-End-Scholarship/assets/63984422/37bcc383-a3fa-4513-a203-5ea588e1c361)
+
 
 ## Displaying the name of the logged in user ✅
 
