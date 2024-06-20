@@ -274,9 +274,9 @@ if (isset($_GET['category_id'])) {
                             <div class="meeting-item">
                                 <div class="thumb">
                                     <div class="price">
-                                        <span><?php echo $Price; ?></span>
+                                        <span><?php echo $Price; ?>$</span>
                                     </div>
-                                    <a href="meeting-details.php?id=<?php echo $id ?>"><img src="assets/images/<?php echo $Image; ?>" alt="<?php echo $Title; ?>"></a>
+                                    <a href="meeting-details.php?id=<?php echo $id ?>"><img src="admin/images/<?php echo $Image; ?>" alt="<?php echo $Title; ?>"></a>
                                 </div>
                                 <div class="down-content">
                                     <div class="date">
@@ -843,5 +843,4 @@ if (isset($_GET['category_id'])) {
     </script>
 </body>
 
-</body>
 </html>
