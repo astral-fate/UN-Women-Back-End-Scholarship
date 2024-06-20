@@ -88,3 +88,10 @@ Displaying the name of the logged in user
 
 ## Fragmentation
 
+
+## Views Of each click
+
+```
+ALTER TABLE courses ADD COLUMN click_count INT DEFAULT 0;
+```
+
