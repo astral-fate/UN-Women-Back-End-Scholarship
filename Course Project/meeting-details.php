@@ -33,7 +33,6 @@ try {
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -133,7 +132,9 @@ try {
                                     <div class="date">
                                         <h6><?php echo date('F', strtotime($course['Date'])); ?> <span><?php echo date('d', strtotime($course['Date'])); ?></span></h6>
                                     </div>
-                                    <a href="meeting-details.php"><img src="assets/images/<?php echo htmlspecialchars($course['Image']); ?>" alt="Course Image"></a>
+                                   
+                                        <img src="admin/images/<?php echo htmlspecialchars($course['Image']); ?>" alt="Course Image">
+                                    
                                 </div>
                                 <div class="down-content">
                                     <a href="meeting-details.php"><h4><?php echo htmlspecialchars($course['Title']); ?></h4></a>
@@ -152,7 +153,7 @@ try {
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <div class="book now">
+                                            <div class="book-now">
                                                 <h5>Book Now</h5>
                                                 <p>010-020-0340<br>090-080-0760</p>
                                             </div>
