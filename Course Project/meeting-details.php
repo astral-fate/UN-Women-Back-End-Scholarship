@@ -3,10 +3,17 @@ session_start();
 
 include_once("admin/includes/conn.php");
 
+
 // Get the course ID from the URL
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 try {
+    // Update click count
+    $sql = "UPDATE courses SET click_count = click_count + 1 WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$id]);
+
+    // Fetch course details
     $sql = "SELECT * FROM courses WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$id]);
@@ -18,6 +25,8 @@ try {
     echo "Error: " . $e->getMessage();
 }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -122,13 +131,14 @@ try {
                                     <div class="date">
                                         <h6><?php echo date('F', strtotime($course['Date'])); ?> <span><?php echo date('d', strtotime($course['Date'])); ?></span></h6>
                                     </div>
-                                   
-                                        <img src="admin/images/<?php echo htmlspecialchars($course['Image']); ?>" alt="Course Image">
                                     
+                                    <img src="admin/images/<?php echo htmlspecialchars($course['Image']); ?>" alt="Course Image">
+                            
                                 </div>
                                 <div class="down-content">
                                     <a href="meeting-details.php"><h4><?php echo htmlspecialchars($course['Title']); ?></h4></a>
                                     <p><?php echo htmlspecialchars($course['Content']); ?></p>
+                                    <p><strong>Views:</strong> <?php echo $course['click_count']; ?></p>
                                     <div class="row">
                                         <div class="col-lg-4">
                                             <div class="hours">
