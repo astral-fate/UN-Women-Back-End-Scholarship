@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once("includes/admin/conn.php");
+include_once("admin/includes/conn.php");
 
 // Fetch data from category table
 try {
