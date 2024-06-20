@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
     $image_name = $_FILES['Image']['name'] ?? $image_name;
 
     if (!empty($_FILES['Image']['tmp_name'])) {
-        move_uploaded_file($_FILES['Image']['tmp_name'], "path/to/upload/directory/" . $image_name);
+        move_uploaded_file($_FILES['Image']['tmp_name'], "admin/images/" . $image_name);
     }
 
     try {
