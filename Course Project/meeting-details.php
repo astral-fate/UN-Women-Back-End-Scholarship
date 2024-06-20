@@ -1,17 +1,7 @@
 <?php
 session_start();
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-
-try {
-    $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
-    $conn = new PDO("mysql:host=$servername;dbname=project_r10", $username, $password, $options);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
+include_once("admin/includes/conn.php");
 
 // Get the course ID from the URL
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
