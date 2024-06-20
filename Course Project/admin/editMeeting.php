@@ -7,7 +7,7 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     try {
         $sql = "SELECT courses.*, category.cat_name FROM courses 
-                JOIN category ON courses.Category = category.id 
+                JOIN category ON courses.Category_id = category.id 
                 WHERE courses.id = ?";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$id]);
@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
             $Location = $result['Location'];
             $Price = $result['Price'];
             $Date = $result['Date'];
-            $Category = $result['Category'];
+            $Category = $result['Category_id'];
             $active = $result['Active'];
             $image_name = $result['Image'];
             $cat_name = $result['cat_name'];
@@ -27,15 +27,14 @@ if (isset($_GET['id'])) {
             $msg = "Meeting not found";
             $alertType = "alert-danger";
         }
-       
-        } catch (PDOException $e) {
-            $msg = $e->getMessage();
-            $alertType = "alert-danger";
-        }
-        } else {
-            $msg = "No meeting ID provided";
-            $alertType = "alert-danger";
-        }
+    } catch (PDOException $e) {
+        $msg = $e->getMessage();
+        $alertType = "alert-danger";
+    }
+} else {
+    $msg = "No meeting ID provided";
+    $alertType = "alert-danger";
+}
 
 // Update meeting details if form is submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
@@ -50,11 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
     $image_name = $_FILES['Image']['name'] ?? $image_name;
 
     if (!empty($_FILES['Image']['tmp_name'])) {
-        move_uploaded_file($_FILES['Image']['tmp_name'], "admin/images/" . $image_name);
+        move_uploaded_file($_FILES['Image']['tmp_name'], "images/" . $image_name);
     }
 
     try {
-        $sql = "UPDATE courses SET Title = ?, Content = ?, Location = ?, Price = ?, Date = ?, Category = ?, Active = ?, Image = ? WHERE id = ?";
+        $sql = "UPDATE courses SET Title = ?, Content = ?, Location = ?, Price = ?, Date = ?, Category_id = ?, Active = ?, Image = ? WHERE id = ?";
         $stmtUpdate = $conn->prepare($sql);
         $stmtUpdate->execute([$Title, $Content, $Location, $Price, $Date, $Category, $active, $image_name, $id]);
 
@@ -72,10 +71,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
 <?php include_once('includes/head.php'); ?>
 <body class="nav-md">
 <?php
-		
-        include_once('includes/alert.php');
-        if(isset($id)){
-    ?>   
+include_once('includes/alert.php');
+if (isset($id)) {
+?>   
 <div class="container body">
     <div class="main_container">
         <div class="col-md-3 left_col">
@@ -86,10 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
                 <div class="clearfix"></div>
 
                 <?php include_once('includes/profile.php'); ?>
-                
-        
                 <?php include_once('includes/sideBar.php'); ?>
-
 
                 <div class="sidebar-footer hidden-small">
                     <a data-toggle="tooltip" data-placement="top" title="Settings">
@@ -105,34 +100,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['update'])) {
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                     </a>
                 </div>
-
-
             </div>
         </div>
 
-        <?php include_once('includes/TopNav.php') ;?>
+        <?php include_once('includes/TopNav.php'); ?>
 
         <div class="right_col" role="main">
             <div class="">
-
-            <?php include_once('includes/pageTitle.php');?>
-
-
+            <?php include_once('includes/pageTitle.php'); ?>
             <?php include_once('includes/EditMeetingForm.php'); ?>
-
             </div>
         </div>
-      
 
         <?php include_once('includes/footerAddMeeting.php'); ?>
-      
     </div>
 </div>
 
 <?php include_once('includes/AddMeetingScript.php'); ?>
 
 <?php
-			}
-		?>
+}
+?>
 </body>
 </html>
