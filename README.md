@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Orentations](#Orentations)
-- [PHP Fundmentals)(#PHP-Fundmentals)
+- [PHP Fundmentals](#PHP-Fundmentals)
 - [Course Projects](#Course-Projects)
 - [CURD Opperations](#CURD-Opperations)
 - [Final Project](#Final-Project)
