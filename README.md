@@ -3,6 +3,7 @@
 ## Table of Contents
 - [Orentations](#Orentations)
 - [PHP Fundmentals](#PHP-Fundmentals)
+- [Larvel Framework](#Larvel-Framework)
 - [Course Projects](#Course-Projects)
 - [CURD Opperations](#CURD-Opperations)
 - [Final Project](#Final-Project)
@@ -24,6 +25,7 @@
 
 
 ## CURD Opperations
+
 
 
 ## Final Project
