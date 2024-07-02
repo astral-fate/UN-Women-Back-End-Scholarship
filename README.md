@@ -14,9 +14,6 @@
 ## PHP Fundmentals
 The basic course lasts for two months, from 16th of April, 2024, till 22th of June, 2024. The content was across 13 lectures, bellow is the details of each:
 
-|  No. Lecture | Content |
-| Lecture 1 | Data preprocessing feature engineering and modeling |
-| Lecture 2 | Data preprocessing feature engineering and modeling |
 
 | No. Lecture | Content |
 |-------------|---------|
@@ -41,10 +38,10 @@ The basic course lasts for two months, from 16th of April, 2024, till 22th of Ju
 
 | Project Name         | Features & Functionalites|
 | :-------------: | :-------------: |
-| Students | Data preprocessing feature engineering and modeling |
-| University Portal | Data cleaning and preprocessing, and feature engineering  |
-| Cars Portal | Data preprocessing, feature engineering and modeling |
-| Education Courses | Data analysis and preprocessing |
+| Students | CURD operations |
+| University Portal | Dashboard, login, sign-up  |
+| Cars Portal | Dashboard, login, sign-up, CURD cars |
+| Education Courses | Dashboard, login, sign-up, CURD courses & categories |
 
 
 
